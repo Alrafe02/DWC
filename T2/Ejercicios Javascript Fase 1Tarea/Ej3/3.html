@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Ej3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <table>
+            <tr>
+            <td>Nombre de usuario:</td>
+            <td><input type="text" id="usuario"></td>
+            </tr>
+            <tr>
+            <td>Correo:</td>
+            <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+               <td> <button type="button" onclick="escribir()""> Enviar </button> </td>
+            </tr>
+        </table>
+       <script> 
+            function escribir() {
+                alert("Usuario: " + document.getElementById("usuario").value + "\nCorreo: " + document.getElementById("email").value)
+            } 
+       </script>
+    </body>
+</html>
