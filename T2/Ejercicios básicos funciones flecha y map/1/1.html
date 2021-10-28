@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>1</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+        const numAleatorio = a => {
+        a = prompt("Introduzca el número: ")
+        parseInt(a)
+        return Math.floor(Math.random() * (a - 1) + 1)
+        }
+
+        document.write("Número aleatorio: " + numAleatorio())
+        </script>
+    </body>
+</html>

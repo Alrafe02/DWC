@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>2</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        
+        <script>
+            var resultado
+            const calculadora = operacion => {
+            num1 = prompt("Introduce el primer numero")
+            num2 = prompt("Introduce el segundo número")
+            parseInt(num1)
+            parseInt(num2)
+            operacion = document.getElementById("Suma").value
+            switch (operacion){
+                case "+": 
+                    resultado = num1 + num2
+                    alert(parseInt(resultado))
+                    break;
+                case "-": 
+                    resultado = num1 - num2
+                    break;
+                case "*": 
+                    resultado = num1 * num2
+                    break;
+                case "/": 
+                    resultado = num1 / num2
+                    break;
+
+            }    
+            return resultado
+        }
+
+        </script>
+
+    <button id="Suma" onclick="calculadora()" value="+"> + </button>
+    <button id="Resta" onclick="calculadora()"> - </button>
+    <button id="Division" onclick="calculadora()"> / </button>
+    <button id="Multiplicacion" onclick="calculadora()"></button>
+
+
+    </body>
+</html>
