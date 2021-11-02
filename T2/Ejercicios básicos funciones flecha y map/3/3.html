@@ -7,60 +7,55 @@
 
         
         <script>
-
+            var ciudad = [
+                {nombre : "Madrid", poblacion: 3334730},
+                {nombre : "Barcelona", poblacion: 1664182},
+                {nombre : "Valencia", poblacion: 800215},
+                {nombre : "Sevilla", poblacion: 691395},
+                {nombre : "Zaragoza", poblacion: 681877},
+                {nombre : "Málaga", poblacion: 578460},
+                {nombre : "Murcia", poblacion: 459403},
+                {nombre : "Palma de Mallorca", poblacion: 422587},
+                {nombre : "Las Palmas de Gran Canaria", poblacion: 381223},
+                {nombre : "Bilbao", poblacion: 350184}
+            ]
             
-            const suma = resultado => {          
-                var num1 = document.getElementById("num1").value
-                var num2 = document.getElementById("num2").value
-                parseInt(num1)
-                parseInt(num2)
-                resultado = parseInt(num1) + parseInt(num2)
-                alert(resultado) 
-            }   
-            const resta = resultado => {          
-                var num1 = document.getElementById("num1").value
-                var num2 = document.getElementById("num2").value
-                parseInt(num1)
-                parseInt(num2)
-                resultado = parseInt(num1) - parseInt(num2)
-                alert(resultado) 
-            }   
-            const producto = resultado => {          
-                var num1 = document.getElementById("num1").value
-                var num2 = document.getElementById("num2").value
-                parseInt(num1)
-                parseInt(num2)
-                resultado = parseInt(num1) * parseInt(num2)
-                alert(resultado) 
-            }   
-            const division = resultado => {          
-                var num1 = document.getElementById("num1").value
-                var num2 = document.getElementById("num2").value
-                parseInt(num1)
-                parseInt(num2)
-                resultado = parseInt(num1) / parseInt(num2)
-                alert(resultado) 
-            } 
+
+
+
+            lista = item => {
+                function prueba(item) {
+                    return [item.nombre,item.poblacion].join(" - ") + "<p>"
+                }
+                document.getElementById("demo").innerHTML = ciudad.map(prueba)
+            }
+
+
         </script>
         <table>
-            <tr>
-            <td>Número 1: </td>
-            <td><input type="number" id="num1" style="width: 75px;"></td>
-            </tr>
-            <tr>
-            <td>Número 2: </td>
-            <td><input type="number" id="num2" style="width: 75px;"></td>
-            </tr>
             <tr style="text-align: center;">
                 <td>
-                    <button id="Suma" onclick="suma();"> + </button>
-                    <button id="Resta" onclick="resta()"> - </button>
+                    <button id="1" onclick="lista();"> El usuario puede ver todas las ciudades y sus habitantes </button>
                 </td>
                 <td>
-                    <button id="Division" onclick="division()"> / </button>
-                    <button id="Multiplicacion" onclick="producto()"> * </button>
+                    <button id="2" onclick="listaCiudades();"> El usuario puede saber cuantas ciudades existen </button>
+                </td>
+                <td>
+                    <button id="3" onclick="borrar();"> Borrar ciudad </button>
+                </td>
+                <td>
+                    <button id="4" onclick="nuevaCiudad();"> Añadir ciudad y habitantes </button>
+                </td>
+                <td>
+                    <button id="5" onclick="masHabitantes();"> Si el usuario solicita saber la ciudad de mas habitantes que se muestre en un color rojo el tipo de
+                        letra
+                         </button>
+                </td>
+                <td>
+                    <button id="6" onclick="menosHabitantes();"> Si el usuario solicita la ciudad de menos habitantes que se muestre en color verde. </button>
                 </td>
             </tr>
         </table>
+        <p id="demo"></p>
     </body>
 </html>
