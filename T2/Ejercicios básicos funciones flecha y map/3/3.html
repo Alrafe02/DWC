@@ -27,7 +27,26 @@
                 function prueba(item) {
                     return [item.nombre,item.poblacion].join(" - ") + "<p>"
                 }
-                document.getElementById("demo").innerHTML = ciudad.map(prueba)
+                document.getElementById("lista").innerHTML = ciudad.map(prueba)
+            }
+            listaCiudades = x => {
+                function prueba(item) {
+                    return item.nombre + "<p>"
+                }
+                for(x = 0; x < ciudad.length; x++) {
+                    document.getElementById("lista2").innerHTML = ciudad.map(prueba)
+                }
+            }
+            borrar = item => {
+                var borrarNombre = prompt("Nombre de la ciudad que quieras borrar")
+                for(x = 0; x < ciudad.length; x++) {
+                    if(ciudad.nombre[x] == borrarNombre) {
+                        var i = ciudad.indexOf(borrarNombre)
+                        ciudad.splice(i, 1)
+                        console.log("Ha entrado en el if")
+                    }
+                    console.log("Ha entrado en el for")
+                }
             }
 
 
@@ -55,7 +74,12 @@
                     <button id="6" onclick="menosHabitantes();"> Si el usuario solicita la ciudad de menos habitantes que se muestre en color verde. </button>
                 </td>
             </tr>
+            <tr>
+                <td><p id="lista"></p></td>
+                <td><p id="lista2"></p></td>
+            </tr>
         </table>
-        <p id="demo"></p>
+        
+        
     </body>
 </html>
