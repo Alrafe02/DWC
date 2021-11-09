@@ -33,19 +33,21 @@
                 function prueba(item) {
                     return item.nombre + "<p>"
                 }
+                var cantidad = 0;
                 for(x = 0; x < ciudad.length; x++) {
-                    document.getElementById("lista2").innerHTML = ciudad.map(prueba)
+                    document.getElementById("lista2_1").innerHTML = ciudad.map(prueba)
+                    cantidad++;
                 }
+                document.getElementById("lista2_2").innerHTML = "Total: " + cantidad;
             }
             borrar = item => {
-                var borrarNombre = prompt("Nombre de la ciudad que quieras borrar")
-                for(x = 0; x < ciudad.length; x++) {
-                    if(ciudad.nombre[x] == borrarNombre) {
-                        var i = ciudad.indexOf(borrarNombre)
-                        ciudad.splice(i, 1)
+                var borrarNombre = prompt("Nombre de la ciudad que quieras borrar");
+                for(var x = 0; x < ciudad.length; x++) {
+
+                    if(ciudad.filter((ciudad) => ciudad.nombre == borrar.nombre )) {
                         console.log("Ha entrado en el if")
                     }
-                    console.log("Ha entrado en el for")
+                    
                 }
             }
 
@@ -76,7 +78,7 @@
             </tr>
             <tr>
                 <td><p id="lista"></p></td>
-                <td><p id="lista2"></p></td>
+                <td><p id="lista2_1"></p><p id="lista2_2"></p></td>
             </tr>
         </table>
         
