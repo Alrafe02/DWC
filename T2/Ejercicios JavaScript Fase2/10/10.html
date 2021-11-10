@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>10</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const producto = resultado => {          
+                var num1 = document.getElementById("num1").value
+                var num2 = document.getElementById("num2").value
+                parseInt(num1)
+                parseInt(num2)
+                resultado = parseInt(num1) * parseInt(num2)
+                alert(resultado) 
+            }   
+            const division = resultado => {          
+                var num1 = document.getElementById("num1").value
+                var num2 = document.getElementById("num2").value
+                parseInt(num1)
+                parseInt(num2)
+                resultado = parseInt(num1) / parseInt(num2)
+                alert(resultado) 
+            } 
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr>
+            <td>Número 2: </td>
+            <td><input type="number" id="num2" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>
+                    <button id="Division" onclick="division()"> / </button>
+                </td>
+                <td>
+                    <button id="Multiplicacion" onclick="producto()"> * </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

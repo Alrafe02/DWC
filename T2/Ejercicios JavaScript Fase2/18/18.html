@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>18</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const comparacion = resultado => {          
+                var num1 = document.getElementById("num1").value
+                var num2 = document.getElementById("num2").value
+                
+                
+                if(num1 == 50 || num2 == 50 || (parseInt(num1) + parseInt(num2) == 50)){
+                    alert("Números correctos")
+                } else{
+                    alert("Números incorrectos")
+                } 
+            }   
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr>
+            <td>Número 2: </td>
+            <td><input type="number" id="num2" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <button id="comparacion" onclick="comparacion()"> Comparar con 50 </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

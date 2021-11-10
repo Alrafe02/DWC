@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>28</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const verificar = resultado => {          
+                var num1 = document.getElementById("num1").value
+                var num2 = document.getElementById("num2").value
+                parseInt(num1)
+                parseInt(num2)
+                if ((num1 >= 50 && num1 <= 99) || (num2 >= 50 && num2 <= 99)){
+                    alert("Verdadero");
+                    } else {
+                    alert("Falso");
+                    } 
+            }   
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr>
+            <td>Número 2: </td>
+            <td><input type="number" id="num2" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <button id="verificar" onclick="verificar()"> Verificar </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

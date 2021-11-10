@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>17</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const resta = resultado => {          
+                var num1 = document.getElementById("num1").value
+                parseInt(num1)
+
+                if(num1 <= 19){
+                    resultado = 19 - num1;
+                } else{
+                    resultado = (num1 - 19) * 3
+                }
+                alert(resultado) 
+            }   
+
+
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <button id="Division" onclick="resta()"> Resta </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

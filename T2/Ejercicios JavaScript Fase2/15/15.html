@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>15</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const diferencia = resultado => {          
+                var num1 = document.getElementById("num1").value
+                if (num1 <= 13) {
+                    resultado = 13 - num1;
+                } else {
+                    resultado = (num1 - 13) * 2;
+                }
+                alert(resultado) 
+                }   
+           
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <button id="Division" onclick="diferencia()"> Diferencia </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

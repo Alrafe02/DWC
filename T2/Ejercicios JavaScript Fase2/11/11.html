@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>11</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+           const celsius = resultado => {          
+                var num1 = document.getElementById("num1").value
+                parseInt(num1)
+                resultado = (num1 - 32) / 1.8
+                alert(resultado + "º C") 
+            }   
+            const fahrenheit = resultado => {          
+                var num1 = document.getElementById("num1").value
+                parseInt(num1)
+                resultado = (num1 * 1.8) +32;
+                alert(resultado + "º F") 
+            } 
+        </script>
+        <table>
+            <tr>
+            <td>Número 1: </td>
+            <td><input type="number" id="num1" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>
+                    <button id="A celsius" onclick="celsius()"> A Celsius </button>
+                </td>
+                <td>
+                    <button id="A Fahrenheit" onclick="fahrenheit()"> A Fahrenheit </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

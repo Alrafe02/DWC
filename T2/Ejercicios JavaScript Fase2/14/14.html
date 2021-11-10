@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>14</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const verExtension = archivo => {
+                archivo = document.getElementById("archivo").value;
+                extension = archivo.split(".").pop();
+                alert(extension)
+            }
+           
+        </script>
+        <table>
+            <tr>
+            <td>extension: </td>
+            <td><input type="text" id="archivo" style="width: 75px;"></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2">
+                    <button id="Division" onclick="verExtension()"> Ver extension</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
