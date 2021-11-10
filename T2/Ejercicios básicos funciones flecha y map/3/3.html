@@ -41,20 +41,49 @@
                 document.getElementById("lista2_2").innerHTML = "Total: " + cantidad;
             }
             borrar = item => {
-                var borrarNombre = prompt("Nombre de la ciudad que quieras borrar");
+                var borrarNombre = document.getElementById("nombreBorrar").value;
                 for(var x = 0; x < ciudad.length; x++) {
-
-                    if(ciudad.filter((ciudad) => ciudad.nombre == borrar.nombre )) {
-                        console.log("Ha entrado en el if")
+                    if(ciudad[x].nombre == borrarNombre ) {
+                        ciudad.splice(x, 1);
                     }
                     
                 }
             }
+            nuevaCiudad = item => {
+                var nombreCiudad = document.getElementById("nombreAñadir").value
+                var habitantesCiudad = document.getElementById("poblacionAñadir").value
+                ciudad.push({nombre: nombreCiudad, poblacion: habitantesCiudad})
+            }
+            masHabitantes = x => {
+                var masPoblacion = 0;
+                for(x = 0; x < ciudad.length; x++) {
+                    
+                    if( parseInt(ciudad[x].poblacion) > masPoblacion ){
+                        masPoblacion = ciudad[x].poblacion
+                        var masPoblacionNombre = ciudad[x].nombre
+                    }
+                    
 
+                }
+                document.getElementById("lista2_3").innerHTML =  "La ciudad con mas población es: " + masPoblacionNombre + " con " + masPoblacion + " habitantes en total"
+            }
+            menosHabitantes = x => {
+                var menosPoblacion = Number.MAX_VALUE;
+                for(x = 0; x < ciudad.length; x++) {
+                    
+                    if( parseInt(ciudad[x].poblacion) < menosPoblacion ){
+                        menosPoblacion = ciudad[x].poblacion
+                        var menosPoblacionNombre = ciudad[x].nombre
+                    }
+                    
+
+                }
+                document.getElementById("lista2_4").innerHTML =  "La ciudad con menos población es: " + menosPoblacionNombre + " con " + menosPoblacion + " habitantes en total"
+            }
 
         </script>
         <table>
-            <tr style="text-align: center;">
+            <tr>
                 <td>
                     <button id="1" onclick="lista();"> El usuario puede ver todas las ciudades y sus habitantes </button>
                 </td>
@@ -79,6 +108,28 @@
             <tr>
                 <td><p id="lista"></p></td>
                 <td><p id="lista2_1"></p><p id="lista2_2"></p></td>
+                <td style=>
+                    <table>
+                    <tr>
+                    <td>Nombre: </td>
+                    <td><input type="text" id="nombreBorrar" style="width: 75px;"></td>
+                    </tr>
+                </table>
+            </td>
+                <td>
+                        <table>
+                        <tr>
+                        <td>Nombre: </td>
+                        <td><input type="text" id="nombreAñadir" style="width: 75px;"></td>
+                        </tr>
+                        <tr>
+                        <td>Poblacion: </td>
+                        <td><input type="number" id="poblacionAñadir" style="width: 75px;"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td><p id = "lista2_3" style="color:red"></p></td>
+                <td><p id = "lista2_4" style="color:green"></p></td>
             </tr>
         </table>
         
