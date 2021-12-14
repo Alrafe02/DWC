@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Formulario</title>
+
+	<style>
+		input.mal{
+			border-color: red;
+			border-width: 3px;
+		}
+		input.bien{
+			border-color: green;
+			border-width: 3px;
+		}
+        textarea{
+            resize: none;
+        }
+	</style>
+</head>
+<body>
+
+
+		<form action="" class="formulario" id="formulario">
+			<h1>CONFIGURACION DEL USUARIO: </h1>
+
+            <h2>Inicio de Sesión</h2>
+
+			<div>
+				<label for="opcion">¿Cuándo quieres que Windows te vuelva a pedir iniciar sesión?</label>
+				<select name="inicioSesion" id="inicioSesion" form="formulario">
+                    <option value="Cuando el PC se activa tras haber estado en suspensión" selected>Cuando el PC se activa tras haber estado en suspensión</option>
+                    <option value="Nunca">Nunca</option>
+                </select> 
+			</div>
+
+            <h2>Contraseña</h2>
+			<div>
+				<label for="contraseña">Nueva Contraseña</label>
+				<input onblur="validarContraseña()" type="password" id="contraseña">
+                <span id="msgContraseña"></span>
+			</div>
+			<div>
+				<label for="contraseña2">Vuelve a escribir la contraseña</label>
+                <input onblur="validarContraseña2()" type="password" id="contraseña2">
+			</div>
+            <div>
+                <label for="indicio">Indicio de contraseña</label>
+                <textarea  id="indicio" rows="4" cols="15" ></textarea>
+            </div>
+
+            <h2>Privacidad</h2>
+			<div>
+				<input type="checkbox" id="detallesCheck">
+				<label for="detalles">Mostrar detalles de la cuenta en la pantalla de inicio de sesión</label>
+			</div>
+
+<br>
+			<div>
+				<input type="submit" id="boton" onclick="return enviarFormulario()" value="Enviar" >
+			</div>
+		</form>
+		<div id="error"></div>
+
+	<script src="1.js"></script>
+</body>
+</html>

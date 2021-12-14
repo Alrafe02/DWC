@@ -1,0 +1,19 @@
+body {
+}
+section { 
+ width:auto; 
+ height:auto;
+}
+article { 
+ width:100%; 
+ height:auto; 
+ border:solid 1px black; 
+ background-color:gray; 
+ margin:5px; 
+ padding:10px;
+}
+article h2 { 
+ background-color:black; 
+ color:white;
+ width:75%;
+}

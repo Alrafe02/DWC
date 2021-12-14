@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Formulario</title>
+
+	<style>
+		input.mal{
+			border-color: red;
+			border-width: 3px;
+		}
+		input.bien{
+			border-color: green;
+			border-width: 3px;
+		}
+		form{
+			display: flex;
+			text-align: center;
+			flex-flow: column;			
+		}
+		div{
+			margin: 10px;
+		}
+		h2{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+
+
+		<form action="" class="formulario" id="formulario">
+			<h2>FORMULARIO: </h2>
+			<span style="color: grey;">Si necesita ayuda mantenga el ratón por encima de la entrada durante unos segundos</span> <br>
+			<div>
+				<label for="nombre">Nombre</label>
+				<abbr title="Obligatorio Rellenar"><input onblur="validarNombre()" type="text" id="nombre" required></abbr>
+			</div>
+			<div>
+				<label for="correo">Correo</label>
+				<abbr title="Debe contener un @ y una terminación"><input onblur="validarCorreo()" type="email" id="correo"></abbr>
+			</div>
+			<div>
+				<label for="contraseña">Contraseña</label>
+				<abbr title="Debe contener: 
+ -Un número 
+-Caracteres minimos: 6 
+-Caracteres maximos: 16">
+				<input onblur="validarContraseña()" type="password" id="contraseña"></abbr>
+			</div>
+			<div>
+				<label for="contraseña2">Comprobar Contraseña</label>
+				<abbr title="Debe coincidir con la contraseña introducida"><input onblur="validarContraseña2()" type="password" id="contraseña2"></abbr>
+			</div>
+			<div>
+				<label for="captcha"><span id="nums"></span></label>
+				<input onblur="validarCaptcha()" type="number" id="resultado">
+			</div>
+			<div>
+				<abbr title="Debe aceptar nuestros términos para poder enviar el formulario"><input type="checkbox" id="validar" onclick="terminos()"></abbr>
+				<label for="validar">Acepto las condiciones</label>
+			</div>
+
+
+
+			<div>
+				<input type="submit" id="boton" onclick="return enviarFormulario()" value="Enviar" disabled>
+			</div>
+		</form>
+		<div id="error"></div>
+
+	<script src="index.js"></script>
+</body>
+</html>
