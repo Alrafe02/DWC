@@ -1,0 +1,38 @@
+[
+      {
+        "dia": "2002-03-01",
+        "ciudad": "cadiz",
+        "viento": "5",
+        "temperatura": "20",
+        "luz": "soleado"
+      },
+      {
+        "dia": "2002-03-02",
+        "ciudad": "cadiz",
+        "viento": "10",
+        "temperatura": "30",
+        "luz": "lluvia"
+      },
+      {
+        "dia": "2002-03-03",
+        "ciudad": "cadiz",
+        "viento": "15",
+        "temperatura": "10",
+        "luz": "nieve"
+      },
+      {
+        "dia": "2002-03-04",
+        "ciudad": "puerto",
+        "viento": "25",
+        "temperatura": "30",
+        "luz": "niebla"
+      },
+      {
+        "dia": "2002-03-05",
+        "ciudad": "puerto",
+        "viento": "50",
+        "temperatura": "10",
+        "luz": "nieve"
+      }
+    ]
+  

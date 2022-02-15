@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+<body>
+
+    <label>
+        <form action="">
+            <input type="text" id="pokemon">
+            <button onclick="buscar()">Buscar</button>
+        </form>
+    </label>
+
+
+
+
+    <script>
+
+var nombre = document.getElementById("pokemon").value;
+
+    console.log(nombre)
+    fetch('https://pokeapi.co/api/v2/pokemon')
+  .then(response => response.json())
+  .then(data => {
+      data.results.forEach(pokemon => {
+          console.log(pokemon.name)
+      })
+  })
+
+
+    
+    </script>
+</body>
+</html>

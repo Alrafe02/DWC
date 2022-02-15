@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+</head>
+    <body>
+        
+
+        <div class=container>
+            <div class="section">
+                <form>
+                    <input type="date" id="fecha1" placeholder="dd-mm-yyyy" value=""
+                    min="1997-01-01" max="2030-12-31">
+                    <input type="date" id="fecha2" placeholder="dd-mm-yyyy" value=""
+                    min="1997-01-01" max="2030-12-31">
+                    <br><br>
+                    <button type="button" class="btn" onclick="return consultar()">Enviar</button>
+                </form>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Ciudad</th>
+                            <th>Viento</th>
+                            <th>Temperatura</th>
+                            <th>Luz</th>
+                        </tr>
+                    </thead>
+                    <tbody id="res">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
